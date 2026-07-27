@@ -45,3 +45,4 @@ Then open <http://localhost:8000>.
 
 - Every article and video link in the course has been checked to confirm it loads and contains real content. See [VIDEO-FIXES.md](VIDEO-FIXES.md) for the full record of what was verified and replaced.
 - All linked articles and videos are third-party resources, credited to their authors and linked to the original source. This repository contains the course structure and exercises only.
+- This site uses Cloudflare Web Analytics, which counts page views without cookies and without collecting anything that identifies individual readers.
