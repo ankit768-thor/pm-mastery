@@ -1,0 +1,54 @@
+/* Hand-written additions on top of the compiled Tailwind build (index-*.css).
+   Only for utilities/components the original build does not contain. */
+
+/* Desktop course sidebar stays in view while a long lesson scrolls */
+@media (min-width: 1024px) {
+  .pm-sticky-aside { position: sticky; top: 4rem; height: calc(100vh - 4rem); align-self: flex-start; }
+}
+
+/* Compact progress readout shown only below the md breakpoint */
+.pm-mobile-only { display: inline; }
+@media (min-width: 768px) { .pm-mobile-only { display: none; } }
+
+/* "New" marker on a sidebar section heading */
+.pm-badge-new {
+  display: inline-block; margin-left: .4rem; padding: 0 .4rem; border-radius: 9999px;
+  font-size: .625rem; line-height: 1rem; letter-spacing: .04em; vertical-align: 1px;
+  background: #e0f2fe; color: #0369a1;
+}
+
+/* Preformatted case-study data: keep column alignment, scroll sideways on narrow screens */
+.pm-pre { white-space: pre; overflow-x: auto; line-height: 1.45; }
+.pm-pre:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+
+/* Quiz difficulty tag */
+.pm-diff {
+  display: inline-block; margin-left: .5rem; padding: 0 .45rem; border-radius: 9999px;
+  font-size: .6875rem; font-weight: 500; line-height: 1.15rem; text-transform: capitalize; vertical-align: 2px;
+  border: 1px solid transparent;
+}
+.pm-diff-beginner { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+.pm-diff-intermediate { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+.pm-diff-advanced { background: #faf5ff; color: #7e22ce; border-color: #e9d5ff; }
+
+/* "Up next" card at the end of each lesson */
+.pm-upnext {
+  display: flex; flex-direction: column; gap: .15rem; width: 100%; text-align: left;
+  padding: 1rem 1.25rem; border: 1px solid #e2e8f0; border-radius: .75rem; background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+.pm-upnext:hover { border-color: #93c5fd; box-shadow: 0 1px 3px rgba(15, 23, 42, .08); }
+.pm-upnext-kicker { font-size: .75rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #2563eb; }
+.pm-upnext-title { font-weight: 600; color: #0f172a; }
+.pm-upnext-meta { font-size: .8125rem; color: #64748b; }
+.pm-upnext-end { padding: 1rem 1.25rem; border: 1px dashed #cbd5e1; border-radius: .75rem; color: #475569; font-size: .9375rem; }
+
+/* Visible keyboard focus for plain buttons and links the component library doesn't style */
+aside button:focus-visible, [role="dialog"] button:focus-visible, .pm-upnext:focus-visible,
+a:focus-visible, [aria-pressed]:focus-visible {
+  outline: 2px solid #2563eb; outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
+}

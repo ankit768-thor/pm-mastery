@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ankit768-thor.github.io/pm-mastery/sitemap.xml
