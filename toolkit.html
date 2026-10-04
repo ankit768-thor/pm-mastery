@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PM Toolkit — Templates &amp; Calculators · PM Mastery</title>
+  <meta name="description" content="Free product management templates (PRD, user story, problem statement, interview script, experiment brief, launch checklist) and calculators for RICE, ICE, WSJF, A/B test sample size and unit economics."/>
+  <link rel="canonical" href="https://ankit768-thor.github.io/pm-mastery/toolkit.html"/>
+  <meta property="og:title" content="PM Toolkit — Templates & Calculators"/>
+  <meta property="og:description" content="Free PM templates and calculators: RICE, ICE, WSJF, A/B sample size, unit economics, PRD, experiment brief and more."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://ankit768-thor.github.io/pm-mastery/toolkit.html"/>
+  <meta name="theme-color" content="#2563eb"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%B0%3C/text%3E%3C/svg%3E"/>
+  <link rel="stylesheet" href="./assets/toolkit-95f3b276.css"/>
+  <script src="./assets/toolkit-689dbac0.js" defer></script>
+</head>
+<body>
+<header class="tk-header">
+  <div class="tk-header-inner">
+    <a class="tk-brand" href="./"><span class="tk-logo" aria-hidden="true">🎓</span><span>PM Mastery <span class="tk-name-long">· Toolkit</span></span></a>
+    <a class="tk-back" href="./">← Back to the course</a>
+  </div>
+</header>
+
+<main id="top">
+  <h1>PM Toolkit</h1>
+  <p class="tk-lead">Calculators and fill-in templates for everyday product work. Everything runs in your browser; calculator inputs are saved on this device only.</p>
+  <nav aria-label="On this page">
+    <ul class="tk-toc">
+      <li><a href="#calculators">Calculators</a></li>
+      <li><a href="#rice">RICE</a></li>
+      <li><a href="#ice">ICE</a></li>
+      <li><a href="#wsjf">WSJF</a></li>
+      <li><a href="#sample-size">A/B sample size</a></li>
+      <li><a href="#unit-economics">Unit economics</a></li>
+      <li><a href="#templates">Templates</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="calculators">Calculators</h2>
+
+  <section class="tk-card" id="rice" aria-labelledby="rice-h">
+    <h3 id="rice-h">RICE prioritization</h3>
+    <p>Score each idea by Reach × Impact × Confidence ÷ Effort. Use it to make your assumptions comparable and debatable, not as an automatic decision. (See Day 11.)</p>
+    <div class="tk-scroll">
+      <table>
+        <thead><tr><th scope="col">Idea</th><th scope="col">Reach (users / quarter)</th><th scope="col">Impact</th><th scope="col">Confidence</th><th scope="col">Effort (person-months)</th><th scope="col"><span class="tk-muted">Row</span></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="tk-actions"><button type="button" class="tk-btn tk-add">Add idea</button><button type="button" class="tk-btn tk-reset">Reset to example</button></div>
+    <h4 class="tk-muted">Ranking (highest score first)</h4>
+    <div class="tk-ranking" aria-live="polite"></div>
+    <p class="tk-note">Impact uses Intercom's scale (3 massive → 0.25 minimal). Confidence below 50% usually means "do discovery first". Effort includes design, engineering and QA time.</p>
+  </section>
+
+  <section class="tk-card" id="ice" aria-labelledby="ice-h">
+    <h3 id="ice-h">ICE scoring</h3>
+    <p>A faster, rougher alternative to RICE for growth experiments: rate Impact, Confidence and Ease from 1 to 10. This calculator averages the three; some teams multiply instead, which usually produces a similar ranking.</p>
+    <div class="tk-scroll">
+      <table>
+        <thead><tr><th scope="col">Idea</th><th scope="col">Impact (1–10)</th><th scope="col">Confidence (1–10)</th><th scope="col">Ease (1–10)</th><th scope="col"><span class="tk-muted">Row</span></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="tk-actions"><button type="button" class="tk-btn tk-add">Add idea</button><button type="button" class="tk-btn tk-reset">Reset to example</button></div>
+    <h4 class="tk-muted">Ranking</h4>
+    <div class="tk-ranking" aria-live="polite"></div>
+  </section>
+
+  <section class="tk-card" id="wsjf" aria-labelledby="wsjf-h">
+    <h3 id="wsjf-h">WSJF (Weighted Shortest Job First)</h3>
+    <p>WSJF, as used in SAFe, divides the Cost of Delay by job size. Cost of Delay = business value + time criticality + risk reduction / opportunity enablement. Score each column <em>relative to the other items</em> using the 1, 2, 3, 5, 8, 13, 20 scale.</p>
+    <div class="tk-scroll">
+      <table>
+        <thead><tr><th scope="col">Job</th><th scope="col">Business value</th><th scope="col">Time criticality</th><th scope="col">Risk reduction / opportunity</th><th scope="col">Job size</th><th scope="col"><span class="tk-muted">Row</span></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="tk-actions"><button type="button" class="tk-btn tk-add">Add job</button><button type="button" class="tk-btn tk-reset">Reset to example</button></div>
+    <h4 class="tk-muted">Ranking</h4>
+    <div class="tk-ranking" aria-live="polite"></div>
+    <p class="tk-note">WSJF favours small, urgent jobs. That is its purpose, but sanity-check the result: a large strategic bet can rank low simply because it is large.</p>
+  </section>
+
+  <section class="tk-card" id="sample-size" aria-labelledby="ss-h">
+    <h3 id="ss-h">A/B test sample size</h3>
+    <p>How many users each variant needs before you can reliably detect the effect you care about, for a conversion-rate metric.</p>
+    <form class="tk-form" novalidate>
+      <label>Baseline conversion rate (%)<input name="baseline" type="number" inputmode="decimal" min="0.01" max="99.99" step="any" value="10"/></label>
+      <label>Minimum detectable effect<input name="mde" type="number" inputmode="decimal" min="0" step="any" value="10"/></label>
+      <label>Effect is…<select name="mdetype"><option value="relative">relative (% of baseline)</option><option value="absolute">absolute (percentage points)</option></select></label>
+      <label>Significance level (two-sided)<select name="alpha"><option value="0.1">0.10 (90% confidence)</option><option value="0.05" selected>0.05 (95% confidence)</option><option value="0.01">0.01 (99% confidence)</option></select></label>
+      <label>Statistical power<select name="power"><option value="0.8" selected>80%</option><option value="0.9">90%</option></select></label>
+      <label>Daily users entering the test (optional)<input name="daily" type="number" inputmode="numeric" min="1" step="1" placeholder="e.g. 5000"/></label>
+    </form>
+    <div class="tk-result" aria-live="polite"></div>
+    <p class="tk-note">Formula: n per variant = (z<sub>α/2</sub> + z<sub>β</sub>)² × [p₁(1−p₁) + p₂(1−p₂)] ÷ (p₂ − p₁)². This is a standard normal approximation; dedicated calculators that use pooled variance can differ by a few percent. Decide the sample size <strong>before</strong> starting, don't stop early because results look significant (peeking inflates false positives), and run whole weeks. (See Day 20.)</p>
+  </section>
+
+  <section class="tk-card" id="unit-economics" aria-labelledby="ue-h">
+    <h3 id="ue-h">Unit economics (subscription)</h3>
+    <p>Lifetime value, LTV : CAC and payback for a simple monthly subscription. Use the same currency for every input.</p>
+    <form class="tk-form" novalidate>
+      <label>ARPU per month<input name="arpu" type="number" inputmode="decimal" min="0" step="any" value="10"/></label>
+      <label>Gross margin (%)<input name="margin" type="number" inputmode="decimal" min="0" max="100" step="any" value="70"/></label>
+      <label>Monthly churn (%)<input name="churn" type="number" inputmode="decimal" min="0" max="100" step="any" value="5"/></label>
+      <label>CAC (cost to acquire a customer)<input name="cac" type="number" inputmode="decimal" min="0" step="any" value="50"/></label>
+    </form>
+    <div class="tk-result" aria-live="polite"></div>
+    <p class="tk-note">LTV here = ARPU × gross margin ÷ monthly churn, which assumes constant churn and no expansion revenue. Payback = CAC ÷ monthly gross profit per customer. Ratios like "LTV : CAC of 3 : 1" are rules of thumb, not laws; early cohorts and discounts can make both numbers misleading.</p>
+  </section>
+
+  <h2 id="templates">Templates</h2>
+  <p class="tk-muted">Open a template, copy it, and fill it in wherever you write (Docs, Notion, Confluence). Delete any section that doesn't help the decision at hand.</p>
+
+  <details class="tk-template" id="prd">
+    <summary>PRD (one-pager) <span>— align the team on problem, scope and success</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-prd">Copy</button>
+<pre id="t-prd">PRODUCT REQUIREMENTS DOCUMENT
+
+Title:        [Feature / initiative]
+Owner:        [PM]              Status: [Draft | In review | Approved]
+Reviewers:    [Eng lead, Design, Data, Support]   Last updated: [Date]
+
+1. PROBLEM
+   Who has the problem, what it is, and the evidence (research, data).
+
+2. GOAL AND SUCCESS METRICS
+   Outcome we want:        ...
+   Primary metric:         [metric] from [baseline] to [target] by [date]
+   Guardrail metrics:      [what must not get worse]
+
+3. USERS AND USE CASES
+   Primary users: ...
+   Top scenarios: 1) ...  2) ...  3) ...
+
+4. SCOPE
+   In scope:      ...
+   Out of scope:  ...   (and why)
+
+5. REQUIREMENTS
+   ID  | User story                           | Priority | Acceptance
+   R1  | As a ..., I want ... so that ...     | Must     | Given/When/Then
+   R2  | ...                                  | Should   | ...
+
+6. EXPERIENCE
+   Links to flows, wireframes or prototype. Edge cases, empty and error
+   states, accessibility notes.
+
+7. TECHNICAL AND DATA CONSIDERATIONS
+   Dependencies, analytics events to track, performance, privacy,
+   security, migration.
+
+8. LAUNCH
+   Rollout plan (flag, % stages), enablement (support, sales), comms.
+
+9. RISKS AND OPEN QUESTIONS
+   Risk / mitigation ...      Question / owner / due date ...</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="prd-checklist">
+    <summary>PRD readiness checklist <span>— before engineering starts</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-prdcheck">Copy</button>
+<pre id="t-prdcheck">PRD READINESS CHECKLIST
+
+[ ] The problem is backed by evidence (interviews, data, support tickets)
+[ ] One primary success metric with a baseline and a target
+[ ] Guardrail metrics named
+[ ] Out-of-scope list agreed with stakeholders
+[ ] Every requirement has acceptance criteria
+[ ] Edge cases, empty states and error states covered
+[ ] Analytics events defined (names, properties, owner)
+[ ] Accessibility considered (contrast, keyboard, screen readers)
+[ ] Privacy, legal and security review needed? Requested?
+[ ] Dependencies on other teams identified and agreed
+[ ] Rollout and rollback plan drafted
+[ ] Support / sales enablement owner named
+[ ] Open questions have owners and due dates</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="problem-statement">
+    <summary>Problem statement <span>— one paragraph the whole team can repeat</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-problem">Copy</button>
+<pre id="t-problem">PROBLEM STATEMENT
+
+[User segment] needs a way to [job / need]
+because [insight backed by evidence].
+
+Today they [current workaround], which costs them [time / money /
+frustration] and costs us [churn / support load / lost revenue].
+
+We will know we have solved it when [measurable outcome] changes
+from [baseline] to [target].
+
+Evidence: [interviews, data points, tickets — with links]
+Not in scope: [what we are deliberately not solving]</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="user-story">
+    <summary>User story with acceptance criteria <span>— Given / When / Then</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-story">Copy</button>
+<pre id="t-story">USER STORY
+
+As a [type of user],
+I want [capability],
+so that [benefit / outcome].
+
+ACCEPTANCE CRITERIA
+Scenario 1: [name]
+  Given [starting context]
+  When  [user action or event]
+  Then  [observable result]
+
+Scenario 2: [edge case or error]
+  Given ...
+  When  ...
+  Then  ...
+
+INVEST check:  [ ] Independent  [ ] Negotiable  [ ] Valuable
+               [ ] Estimable    [ ] Small       [ ] Testable
+Notes / designs / analytics events: ...</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="interview-script">
+    <summary>Customer interview script <span>— learn about past behaviour, not opinions</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-interview">Copy</button>
+<pre id="t-interview">CUSTOMER INTERVIEW SCRIPT (30 min)
+
+Goal of this interview: [the one thing you want to learn]
+
+INTRO (2 min)
+- Thanks. We're learning how people [do the job]. No right answers;
+  we're not selling anything. OK to take notes?
+
+CONTEXT (5 min)
+- Tell me about your role / your week when it comes to [topic].
+
+THE LAST TIME (15 min)  -- dig into one real, recent example
+- Tell me about the last time you [did the job]. What happened?
+- What triggered it? What did you try first?
+- What was the hardest part? Why?
+- What did that cost you (time, money, stress)?
+- What tools or workarounds do you use today? What do you dislike?
+- Have you looked for a better way? What happened?
+
+WRAP-UP (5 min)
+- Is there anything I should have asked but didn't?
+- Who else should I talk to?
+
+AVOID: "Would you use...?", "Do you like this idea?", leading questions,
+pitching your solution, and future hypotheticals.
+After: write the 3 most important things you learned within 1 hour.</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="journey">
+    <summary>Customer journey map <span>— stages × what users do, think and feel</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-journey">Copy</button>
+<pre id="t-journey">CUSTOMER JOURNEY MAP — [persona] doing [goal]
+
+STAGE         | Discover | Evaluate | Sign up | First use | Habit | Renew
+--------------+----------+----------+---------+-----------+-------+------
+Goal          |          |          |         |           |       |
+Actions       |          |          |         |           |       |
+Touchpoints   |          |          |         |           |       |
+Thinking      |          |          |         |           |       |
+Feeling (+/-) |          |          |         |           |       |
+Pain points   |          |          |         |           |       |
+Opportunities |          |          |         |           |       |
+Metric        |          |          |         |           |       |
+
+Base every cell on research. Mark assumptions with (?).</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="ost">
+    <summary>Opportunity solution tree <span>— connect an outcome to experiments</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-ost">Copy</button>
+<pre id="t-ost">OPPORTUNITY SOLUTION TREE  (Teresa Torres' continuous discovery model)
+
+OUTCOME: [one measurable product outcome, e.g. +10% week-4 retention]
+|
++-- Opportunity 1: [a customer need or pain, in their words]
+|   +-- Solution 1a: ...
+|   |   +-- Assumption test: [riskiest assumption] -> [cheap test]
+|   +-- Solution 1b: ...
+|
++-- Opportunity 2: ...
+|   +-- Solution 2a: ...
+|
++-- Opportunity 3: ...
+
+Rules of thumb: opportunities come from interviews, not brainstorming;
+compare at least 3 solutions for the opportunity you pick; test
+assumptions before building.</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="metrics-tree">
+    <summary>Metrics tree <span>— from a North Star down to levers teams own</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-metrics">Copy</button>
+<pre id="t-metrics">METRICS TREE
+
+NORTH STAR: [e.g. weekly orders delivered on time]
+= Active customers x Orders per active customer x On-time rate
+
+  Active customers
+  +-- New customers who placed a first order   (Growth team)
+  +-- Returning customers                       (Retention team)
+
+  Orders per active customer
+  +-- Sessions per customer
+  +-- Session-to-order conversion               (Search, Menu, Checkout)
+
+  On-time rate
+  +-- Restaurant prep time                      (Merchant team)
+  +-- Courier assignment and travel time        (Logistics team)
+
+GUARDRAILS: [cancellation rate, support contacts per order,
+             contribution margin per order]
+Owner per metric: ...    Review cadence: weekly</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="experiment-brief">
+    <summary>Experiment brief <span>— write the decision rules before launch</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-experiment">Copy</button>
+<pre id="t-experiment">EXPERIMENT BRIEF
+
+Name / owner / dates: ...
+
+HYPOTHESIS
+If we [change] for [segment], then [primary metric] will [increase /
+decrease] by at least [MDE], because [evidence or rationale].
+
+METRICS
+Primary:     [metric] (baseline: ...)
+Guardrails:  [metrics that must not get worse, with thresholds]
+Diagnostic:  [metrics that help explain the result]
+
+DESIGN
+Variants:          Control = ...   Treatment = ...
+Unit / targeting:  [user, session, ...] / [who is eligible]
+Allocation:        [50/50]
+Sample size:       [n per variant, from the calculator]
+Duration:          [whole weeks]
+
+DECISION RULES (agreed before launch)
+Ship if:    primary metric significantly better AND guardrails hold
+Iterate if: no significant change but diagnostics show promise
+Stop if:    any guardrail worsens beyond [threshold]
+
+QUALITY CHECKS
+[ ] Events QA'd   [ ] Sample ratio mismatch check   [ ] No peeking
+
+RESULT AND DECISION (fill in after)
+...</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="launch-checklist">
+    <summary>Launch checklist <span>— product, quality, data, rollout, enablement</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-launch">Copy</button>
+<pre id="t-launch">LAUNCH CHECKLIST — [feature]      Launch tier: [1 | 2 | 3]
+
+PRODUCT
+[ ] Acceptance criteria met and demoed to stakeholders
+[ ] Known issues documented with severity and owner
+
+QUALITY
+[ ] QA sign-off on supported platforms and app versions
+[ ] Accessibility check done
+[ ] Performance and error-rate dashboards ready
+
+DATA
+[ ] Analytics events firing and verified in production
+[ ] Success and guardrail dashboard shared
+
+ROLLOUT
+[ ] Behind a feature flag with a kill switch
+[ ] Stages: internal -> 5% -> 25% -> 100%, with go/no-go criteria
+[ ] Rollback plan and owner on call
+
+ENABLEMENT AND COMMS
+[ ] Support macros / FAQ written; support team briefed
+[ ] Sales / partner enablement (if relevant)
+[ ] Release notes, in-app messaging, blog / email (by tier)
+
+AFTER LAUNCH
+[ ] Post-launch review scheduled for [date]</pre>
+    </div>
+  </details>
+
+  <details class="tk-template" id="post-launch-review">
+    <summary>Post-launch review <span>— learn, then decide what's next</span></summary>
+    <div class="tk-template-body">
+      <button type="button" class="tk-btn" data-copy="t-review">Copy</button>
+<pre id="t-review">POST-LAUNCH REVIEW — [feature]     [weeks after launch]
+
+GOAL VS ACTUAL
+Metric            | Baseline | Target | Actual | Verdict
+Primary: ...      |          |        |        |
+Guardrail: ...    |          |        |        |
+
+WHAT WE LEARNED
+- About users: ...
+- About the problem / solution: ...
+- About our process: ...
+
+WHAT WENT WELL / WHAT DIDN'T
+...
+
+SURPRISES (good and bad)
+...
+
+DECISION
+[ ] Keep and invest further   [ ] Iterate   [ ] Roll back / sunset
+Rationale: ...
+
+FOLLOW-UPS
+Action | Owner | Due date</pre>
+    </div>
+  </details>
+
+  <p><a href="#top">Back to top</a> · <a href="./">Back to the course</a></p>
+</main>
+
+<footer>
+  <p>Calculators are simplified approximations for learning and planning; use your company's analytics or statistics tooling for decisions that carry real risk. Part of <a href="./">PM Mastery</a>, a free product management course.</p>
+</footer>
+</body>
+</html>
