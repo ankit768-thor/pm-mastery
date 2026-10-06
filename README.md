@@ -1,4 +1,4 @@
-# PM Mastery — 37-Day Product Management Course
+# PM Mastery — Free Product Management Course
 
 A free, self-paced product management course that runs entirely in your browser — no signup, no install.
 
@@ -6,7 +6,7 @@ A free, self-paced product management course that runs entirely in your browser 
 
 ## What's inside
 
-**37 days, six sections:**
+**37 core days in seven sections, plus 17 Deep Dives modules:**
 
 | Section | Days | Covers |
 |---|---|---|
@@ -25,11 +25,39 @@ A free, self-paced product management course that runs entirely in your browser 
 - A practical exercise that produces a real artifact
 - A 10-question quiz with explanations
 
-Your progress is saved in your own browser.
+Your progress is saved in your own browser. Every lesson has its own link (for example `#day-13`), so you can bookmark or share it, and refreshing returns you to where you were.
 
 ## The Level Up section
 
 Days 31–37 exist to close the gap between *knowing* product management and *being hirable* as a PM. They cover the things most courses skip: actually operating the tools, enough technical fluency to earn engineers' respect, pricing, shipping AI features responsibly, and — most importantly — **Day 36**, a guided two-week project where you interview real users, build a prototype, test it, and write it up as a portfolio case study.
+
+## Deep Dives (new)
+
+A separate section after the core course, for topics the 37 days don't cover in depth, plus case studies where you reason from data instead of memorising definitions. Start with Module 1: it maps the path and helps you pick what to study next.
+
+| Module | Topic |
+|---|---|
+| Module 1 | PM Roles, the Product Lifecycle & Your Learning Path |
+| Module 2 | Continuous Discovery: Jobs To Be Done, Opportunity Solution Trees & Assumption Mapping |
+| Module 3 | Strategy Deep Dive: Business Models, Competitive Forces, Positioning & Moats |
+| Module 4 | Advanced Prioritization: ICE, Opportunity Scoring, Cost of Delay & WSJF |
+| Module 5 | Unit Economics & Business Metrics for PMs |
+| Module 6 | Experimentation Deep Dive: Designing and Reading A/B Tests |
+| Module 7 | Product Analytics & Root-Cause Analysis |
+| Module 8 | Launch & Go-To-Market: Release Management, Launch Plans and Post-Launch Reviews |
+| Module 9 | Technical PM: How Systems Fit Together |
+| Module 10 | Building LLM Products: RAG, Agents, Model Choice and AI Product Metrics |
+| Module 11 | Product Leadership & Product Operations |
+| Module 12 | Case Study: Food Delivery Orders Are Declining |
+| Module 13 | Case Study: Checkout Conversion Is Falling |
+| Module 14 | Case Study: Prioritize Six Feature Requests |
+| Module 15 | Case Study: Launch a New Product |
+| Module 16 | Case Study: Fix a Retention Problem |
+| Module 17 | The PM Toolkit: Templates & Calculators |
+
+## PM Toolkit
+
+[toolkit.html](https://ankit768-thor.github.io/pm-mastery/toolkit.html) has calculators (RICE, ICE, WSJF, A/B test sample size, unit economics) and copyable templates (PRD, problem statement, user story, interview script, journey map, opportunity solution tree, metrics tree, experiment brief, launch checklist, post-launch review).
 
 ## Running it locally
 
@@ -40,6 +68,10 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
+
+## Editing the content
+
+All lessons, quizzes and sidebar sections live in `content/course.json`; the app loads it at startup, so content fixes never require touching the JavaScript. After editing, run the checks in `tests/` (see `tests/README.md`). If you change anything in `assets/`, run `python3 tools/rehash_assets.py` so browsers don't serve a stale cached copy.
 
 ## Notes
 
