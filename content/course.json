@@ -3134,15 +3134,16 @@
    ],
    "readingArticles": [
     {
-     "title": "Agile Manifesto Principles",
-     "source": "Agile Alliance",
-     "url": "https://www.agilealliance.org/agile101/the-agile-manifesto/",
-     "duration": "8 min",
+     "title": "What Is the Agile Manifesto? 4 Values & 12 Principles Explained",
+     "source": "Wrike Agile Guide",
+     "url": "https://www.wrike.com/agile-guide/agile-manifesto/",
+     "duration": "9 min",
      "keyPoints": [
       "Individuals and interactions over processes and tools",
       "Working software over comprehensive documentation",
       "Customer collaboration over contract negotiation",
-      "Responding to change over following a plan"
+      "Responding to change over following a plan",
+      "12 principles: early and continuous delivery, welcome changing requirements, sustainable pace, reflect and adjust"
      ]
     },
     {
